@@ -1,0 +1,24 @@
+<h1>Your Albums</h1>
+
+#foreach($album in $albums)
+  <ul>
+    <li><a href = "/albums/$album.getId()">$album.getTitle()</a></li>
+  </ul>
+#end
+
+
+
+<h3>Add an Album:<h3>
+
+<form action = "/albums" method = "post">
+  <label for = "albumTitle">Album Title:</label>
+    <input type = "text" name = "albumTitle" id = "albumTitle"></input>
+
+  <label for = "albumArtist">Album Artist:</label>
+    <input type = "text" name = "albumArtist" id = "albumArtist"></input>
+
+  <label for = "albumReleaseDate">Release Year:</label>
+    <input type = "text" name = "albumReleaseDate" id = "albumReleaseDate"></input>
+
+  <button class = "button">Add Album</button>
+</form>

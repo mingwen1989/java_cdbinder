@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AlbumTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2016-05-10T22:09:57" hostname="epicodus-54.local" time="0.305">
+  <properties/>
+  <testcase name="equals_returnsTrueIfNamesAretheSame" classname="AlbumTest" time="0.093"/>
+  <testcase name="Album_Instantiates_true" classname="AlbumTest" time="0.006"/>
+  <testcase name="getGenres_returnsAllGenres_List" classname="AlbumTest" time="0.058"/>
+  <testcase name="getAlbumInfo_albumInstantiates_String" classname="AlbumTest" time="0.007"/>
+  <testcase name="delete_deletesAllGenresAndAlbumsAssociations" classname="AlbumTest" time="0.028"/>
+  <testcase name="all_emptyAtFirst" classname="AlbumTest" time="0.01"/>
+  <testcase name="save_savesIntoDatabase_true" classname="AlbumTest" time="0.015"/>
+  <testcase name="addGenre_addsGenreToAlbum_true" classname="AlbumTest" time="0.025"/>
+  <testcase name="save_assignsIdToObject" classname="AlbumTest" time="0.015"/>
+  <testcase name="update_updatesTitle_true" classname="AlbumTest" time="0.031"/>
+  <testcase name="find_findAlbumInDatabase_true" classname="AlbumTest" time="0.015"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

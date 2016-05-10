@@ -1,0 +1,46 @@
+<h1>$albums.getTitle()</h1>
+
+<div class = "container">
+#if($albums.getGenres())
+  Genres for this Album:
+  <ul>
+    #foreach($genre in $albums.getGenres())
+      <li>$genre.getGenreType()</li>
+    #end
+  </ul>
+#end
+</div>
+
+<h3>Add a Genre:</h3>
+
+<div class = "container">
+  <form action="/add_genre" method = "post">
+    <input id = "album_id" name = "album_id" type = "hidden" value = "$albums.getId()">
+    <label for = "genre_id">Select a Genre</label>
+    <select id = "genre_id"  name = "genre_id" type = "text">
+      #foreach($genre in $allGenres)
+        <option value = "$genre.getId()">$genre.getGenreType()</option>
+      #end
+    </select>
+    <button type = "submit" class = "btn">Add Genre</button>
+  </form>
+</div>
+
+<div class = "container">
+</h3>Update Album Info</h3>
+  <form action = "/albums/$albums.getId()/update" method = "post">
+    <label for = "updateAlbum">Update Album Name</label>
+    <input type = "text" id = "updateAlbum" name = "updateAlbum"></input>
+
+    <label for = "updateArtist">Update Artist</label>
+    <input type = "text" id = "updateArtist" name = "updateArtist"></input>
+
+    <label for = "updateReleaseDate">Update Release Date</label>
+    <input type = "text" id = "updateReleaseDate" name = "updateReleaseDate"></input>
+
+    <button type = "submit" class = "btn">Update Album</button>
+  </form>
+</div>
+
+<button class = "warning"><a href = "/albums/$albums.getId()/delete">**Delete This Album**</a></button>
+<button class = "btn"><a href = "/">Home</a></button>
